@@ -22,7 +22,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
-import com.pjasoft.ilatorrefappmusic.data.model.Album
+import com.pjasoft.ilatorreappmusic.data.model.Album
+
 
 @Composable
 fun AlbumCarouselCard(

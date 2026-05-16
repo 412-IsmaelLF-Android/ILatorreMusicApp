@@ -7,8 +7,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.pjasoft.ilatorrefappmusic.ui.detail.DetailScreen
-import com.pjasoft.ilatorrefappmusic.ui.home.HomeScreen
+import com.pjasoft.ilatorreappmusic.ui.detail.DetailScreen
+import com.pjasoft.ilatorreappmusic.ui.home.HomeScreen
 
 sealed class Screen(val route: String) {
     object Home : Screen("home")

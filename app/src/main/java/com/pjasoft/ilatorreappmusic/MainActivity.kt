@@ -13,7 +13,6 @@ import coil3.network.okhttp.OkHttpNetworkFetcherFactory
 import coil3.request.crossfade
 import com.pjasoft.ilatorreappmusic.navigation.MusicNavGraph
 import com.pjasoft.ilatorrefappmusic.ui.theme.ILatorremusicappTheme
-import com.pjasoft.ilatorrefappmusic.ui.theme.LightBackground
 import okhttp3.OkHttpClient
 
 class MainActivity : ComponentActivity() {

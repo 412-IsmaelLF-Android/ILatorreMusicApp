@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.pjasoft.ilatorrefappmusic"
+    namespace = "com.pjasoft.ilatorreappmusic"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.pjasoft.ilatorrefappmusic"
+        applicationId = "com.pjasoft.ilatorreappmusic"
         minSdk = 29
         targetSdk = 36
         versionCode = 1

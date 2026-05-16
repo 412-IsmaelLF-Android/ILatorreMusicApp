@@ -1,4 +1,4 @@
-package com.pjasoft.ilatorrefappmusic.ui.components
+package com.pjasoft.ilatorreappmusic.ui.components
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape

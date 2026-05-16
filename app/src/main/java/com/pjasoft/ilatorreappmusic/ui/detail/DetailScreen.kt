@@ -1,4 +1,4 @@
-package com.pjasoft.ilatorrefappmusic.ui.detail
+package com.pjasoft.ilatorreappmusic.ui.detail
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -24,16 +24,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
-import com.pjasoft.ilatorrefappmusic.data.model.Album
-import com.pjasoft.ilatorrefappmusic.data.repository.MusicRepository
-import com.pjasoft.ilatorrefappmusic.data.repository.Result
-import com.pjasoft.ilatorrefappmusic.ui.components.MiniPlayer
-import com.pjasoft.ilatorrefappmusic.ui.components.TrackItem
+import com.pjasoft.ilatorreappmusic.data.model.Album
+import com.pjasoft.ilatorreappmusic.data.repository.MusicRepository
+import com.pjasoft.ilatorreappmusic.ui.components.MiniPlayer
+import com.pjasoft.ilatorreappmusic.ui.components.TrackItem
 import com.pjasoft.ilatorrefappmusic.ui.theme.DeepPurple
 import com.pjasoft.ilatorrefappmusic.ui.theme.LightBackground
 import com.pjasoft.ilatorrefappmusic.ui.theme.OverlayPurple
 import com.pjasoft.ilatorrefappmusic.ui.theme.PrimaryPurple
 import kotlinx.coroutines.launch
+import com.pjasoft.ilatorreappmusic.data.repository.Result
 
 @Composable
 fun DetailScreen(
@@ -312,3 +312,4 @@ fun DetailScreen(
         )
     }
 }
+

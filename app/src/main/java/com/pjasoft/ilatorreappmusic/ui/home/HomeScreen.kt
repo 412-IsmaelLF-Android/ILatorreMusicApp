@@ -1,4 +1,4 @@
-package com.pjasoft.ilatorrefappmusic.ui.home
+package com.pjasoft.ilatorreappmusic.ui.home
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -17,15 +17,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.pjasoft.ilatorrefappmusic.data.model.Album
-import com.pjasoft.ilatorrefappmusic.data.repository.MusicRepository
+import com.pjasoft.ilatorreappmusic.data.model.Album
+import com.pjasoft.ilatorreappmusic.data.repository.MusicRepository
 import com.pjasoft.ilatorreappmusic.ui.components.AlbumCarouselCard
-import com.pjasoft.ilatorrefappmusic.ui.components.MiniPlayer
-import com.pjasoft.ilatorrefappmusic.ui.components.RecentlyPlayedItem
+import com.pjasoft.ilatorreappmusic.ui.components.MiniPlayer
+import com.pjasoft.ilatorreappmusic.ui.components.RecentlyPlayedItem
 import com.pjasoft.ilatorrefappmusic.ui.theme.DeepPurple
 import com.pjasoft.ilatorrefappmusic.ui.theme.LightBackground
 import com.pjasoft.ilatorrefappmusic.ui.theme.PrimaryPurple
 import kotlinx.coroutines.launch
+import com.pjasoft.ilatorreappmusic.data.repository.Result
+import androidx.compose.foundation.lazy.items
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
