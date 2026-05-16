@@ -5,43 +5,48 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.pjasoft.ilatorreappmusic.ui.theme.ILatorreAppmusicTheme
+import coil3.ImageLoader
+import coil3.compose.setSingletonImageLoaderFactory
+import coil3.network.okhttp.OkHttpNetworkFetcherFactory
+import coil3.request.crossfade
+import com.pjasoft.ilatorreappmusic.navigation.MusicNavGraph
+import com.pjasoft.ilatorrefappmusic.ui.theme.ILatorremusicappTheme
+import com.pjasoft.ilatorrefappmusic.ui.theme.LightBackground
+import okhttp3.OkHttpClient
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            ILatorreAppmusicTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+            setSingletonImageLoaderFactory { context ->
+                ImageLoader.Builder(context)
+                    .components {
+                        add(OkHttpNetworkFetcherFactory(
+                            callFactory = {
+                                OkHttpClient.Builder()
+                                    .addInterceptor { chain ->
+                                        val request = chain.request().newBuilder()
+                                            .header("User-Agent", "ILatorremusicapp/1.0")
+                                            .build()
+                                        chain.proceed(request)
+                                    }
+                                    .build()
+                            }
+                        ))
+                    }
+                    .crossfade(true)
+                    .build()
+            }
+
+            ILatorremusicappTheme {
+                Surface(modifier = Modifier.fillMaxSize(),
+                    color = LightBackground) {
+                    MusicNavGraph()
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    ILatorreAppmusicTheme {
-        Greeting("Android")
     }
 }
