@@ -42,8 +42,7 @@ class MainActivity : ComponentActivity() {
             }
 
             ILatorremusicappTheme {
-                Surface(modifier = Modifier.fillMaxSize(),
-                    color = LightBackground) {
+                Surface(modifier = Modifier.fillMaxSize()) {
                     MusicNavGraph()
                 }
             }
